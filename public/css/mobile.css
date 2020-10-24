@@ -1,0 +1,39 @@
+@media (max-width: 640px){
+    /** On augmente le coeff fixe des tailles à base de calcul **/
+    #serie_info:last-child, #nfserie_desc, #episode_info:last-child{
+        font-size: calc(0.2vw + 15px);
+    }
+
+    #nfserie_title, #nfdserie_title, #serie_nom{
+        font-size: calc(0.5vw + 40px);
+    }
+
+    /** On adapte l'affichage des séries à un format plus mobile friendly **/
+    /** On en fait de même pour les épisodes d'ailleurs **/
+
+    .nfserie, .nfdserie, #serie_info, .season_list_item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    /** On adapte le footer ensuite **/
+    #networkwrapper{
+        display: flex;
+        justify-content: center;
+    }
+
+    #networkwrapper div{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* Adaptation des textes trop longs  */
+    #serie_redac{
+        font-size: calc(0.25vw + 15px);
+    }
+
+}

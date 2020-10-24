@@ -1,0 +1,408 @@
+/* Général */
+body, html, #main{
+    background-color: #F0F0F0;
+
+}
+
+body{
+    text-align: justify-all;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #232323;
+}
+
+.card{
+    color: black;
+}
+.logo{
+    width: 25px;
+    height: auto;
+    margin-bottom: 5px;
+
+}
+/* Header */
+header{
+    background-color: white;
+}
+
+
+nav div ul{
+    list-style-type: none;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+nav div ul li{
+    transition: all .3s ease-in-out;
+}
+
+nav div ul li:hover{
+    transform: scale(1.2);
+}
+
+nav div ul li a{
+    text-decoration: none;
+}
+
+nav div ul *{
+    color: #232323;
+}
+
+nav button{
+    color: black;
+}
+
+#search{
+    display: flex;
+    justify-content: center;
+    padding: 5vh 0;
+}
+
+/* Séries */
+/* Général */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+#nfserie_title, #nfdserie_title, #serie_nom{
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: calc(0.5vw + 30px);
+}
+
+#nfserie_desc, #nfdserie_desc, #serie_desc{
+    font-weight: lighter;
+}
+
+#nav_logo{
+    width: 175px;
+    height: auto;
+}
+#nav_logo_footer{
+    width: 249px;
+    height: auto;
+}
+
+/* Séries
+    Grid
+ */
+
+#serie_info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 2fr;
+    grid-template-areas:
+        "img title"
+        "img infos"
+        "img tags"
+        "img vu"
+        "img desc";
+}
+
+#serie_redac{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+#serie_nom{
+    grid-area: title;
+}
+
+#serie_info:last-child{
+    grid-area: desc;
+    font-size: calc(0.2vw + 10px);
+}
+
+#serie_img{
+    grid-area: img;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#serie_infos{
+    grid-area: infos;
+}
+
+#serie_tags{
+    grid-area: tags;
+}
+
+#serie_infos, #serie_tags{
+    font-style: italic;
+}
+
+
+#serie_vu{
+    grid-area: vu;
+}
+
+/* Séries
+    Saisons
+ */
+
+#season_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.season_list_img_inner{
+    width: 130px;
+    height: auto;
+}
+
+.season_list_item{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "infos infos infos date date date"
+        "img desc desc desc desc desc";
+}
+
+.season_list_infos{
+    grid-area: infos;
+    text-align: left;
+}
+
+.season_list_date{
+    grid-area: date;
+    text-align: right;
+}
+
+.season_list_img{
+    grid-area: img;
+}
+
+.season_list_item p:last-of-type{
+    grid-area: desc;
+}
+
+
+
+
+/* Séries
+    Commentaires
+ */
+
+#comment_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment_tocheck, .add_comment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+/* Séries (non focus) */
+.nfserie, .nfdserie{
+    margin-bottom: 5vh;
+}
+
+/* Série gauche */
+.nfserie{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 2fr 0.5fr;
+    grid-template-areas:
+        "img title"
+        "img tags"
+        "img desc"
+        "img esp";
+}
+
+#nfserie_title{
+    grid-area: title;
+}
+
+#nfserie_desc{
+    grid-area: desc;
+    font-size: calc(0.2vw + 10px);
+}
+
+#nfserie_img{
+    grid-area: img;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#nfserie_tags{
+    grid-area: tags;
+    font-style: italic;
+}
+
+#nfserie_esp{
+    grid-area: esp;
+}
+
+/* Séries (non focus) */
+/* Série droite */
+.nfdserie{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 2fr 0.5fr;
+    grid-template-areas:
+        "dtitle dimg"
+        "dtags dimg"
+        "ddesc dimg"
+        "desp dimg";
+}
+
+#nfdserie_title{
+    grid-area: dtitle;
+
+}
+
+#nfdserie_desc{
+    grid-area: ddesc;
+
+}
+
+#nfdserie_img{
+    grid-area: dimg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nfdserie_tags{
+    grid-area: dtags;
+    font-style: italic;
+
+}
+
+#nfdserie_esp{
+    grid-area: desp;
+}
+
+/* Episodes */
+#episode_btn{
+    display: flex;
+    justify-content: center;
+}
+
+#episode_info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 2fr;
+    grid-template-areas:
+        "img title"
+        "img infos"
+        "img time"
+        "img tags"
+        "img desc";
+}
+
+#episode_nom{
+    grid-area: title;
+}
+
+#episode_info:last-child{
+    grid-area: desc;
+    font-size: calc(0.2vw + 10px);
+}
+
+#episode_img{
+    grid-area: img;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#episode_infos{
+    grid-area: infos;
+}
+
+#episode_tags{
+    grid-area: tags;
+}
+
+#episode_time{
+    grid-area: time;
+}
+#episode_time, #episode_infos{
+    font-style: italic;
+}
+
+/* Administration */
+#admin_comments{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.admin_comment, .admin_comment div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*Bouton custom*/
+
+.btn-outline-custom1:visited,.btn-outline-custom1:link{
+    color:#4B1987;
+    border:1px solid #9B2A8D;
+    background-image: linear-gradient(45deg,rgba(155,42,141,0.2),rgba(31,56,150,0.2));
+}
+.btn-outline-custom1:hover{
+    background-image: linear-gradient(45deg,rgba(155,42,141,0.4),rgba(31,56,150,0.4));
+}
+.btn-outline-custom1.focus,.btn-outline-custom1:focus{
+    box-shadow:0 0 0 .2rem #9B2A8D
+}
+
+.btn-outline-custom2:visited,.btn-outline-custom2:link{
+    color:#4B1987;
+    border:1px solid #9B2A8D;
+    background-image: linear-gradient(45deg,rgba(31,56,150,0.2),rgba(155,42,141,0.2));
+}
+.btn-outline-custom2:hover{
+    background-image: linear-gradient(45deg,rgba(31,56,150,0.4),rgba(155,42,141,0.4));
+}
+.btn-outline-custom2.focus,.btn-outline-custom2:focus{
+    box-shadow:0 0 0 .2rem #9B2A8D
+}
+
+/* Player */
+.player_wrapper{
+    display: flex;
+    justify-content: center;
+}
+
